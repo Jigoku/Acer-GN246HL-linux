@@ -21,8 +21,7 @@ Following this guide enabled lightboost on my monitor and also gave access to 10
 Now whilst this worked, i had also connected a Windows10 HDD, to see how it "should" be performing as a monitor. I followed the guides here relating to windows https://www.blurbusters.com/zero-motion-blur/lightboost/
 (see "Alternate LightBoost HOWTO #3: ToastyX Custom Resolution Utility")
 
-Once i had followed this, i decided to dump the EDID.bin from within Windows so things are "like for like". Then loaded this up on Linux using the following xorg related config;
-
+Once i had followed this, i decided to dump the EDID.bin from within Windows after configuring lightboost, so things are "like for like". You can download my EDID.bin from [here](https://github.com/Jigoku/Acer-GN246HL-linux/blob/master/files/EDID.bin), just place this at */etc/X11/EDID.bin*, then use the following xorg related config to load it;
 
 */etc/X11/xorg.conf.d/10-nvidia.conf*
 ```
