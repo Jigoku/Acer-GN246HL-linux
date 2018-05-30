@@ -30,7 +30,9 @@ Once i had followed this, i decided to dump the EDID.bin from within Windows aft
 Skip this part if you want to, as it's not neccesary to configure the monitor in X11 if you wish to use the EDID file contained in this repository.
 
 As for the previous paragraphs, with the link to custom modelines; as example for 120hz;
-`Modeline "1920x1080_120lb" 286.7 1920 1968 2000 2080 1080 1083 1088 1149 +HSync -VSync`
+```
+Modeline "1920x1080_120lb" 286.7 1920 1968 2000 2080 1080 1083 1088 1149 +HSync -VSync
+```
 
 This is an invalid modeline, hence you have to allow non edid modes. The reason for this, is that the last paramater for the vertical trace, should in fact be 1144. However, for the sake of enabling lightboost, this needs to be within the range of 1149-1180. I'm not fluent in the reasons for this, but thought i'd mention it for the sake of using `cvt` to generate a modeline.
 
