@@ -1,6 +1,7 @@
 # Acer-GN246HL-linux
 Some information about using an Acer GN246HL monitor on Linux with nVidia lightboost.
 
+## Background
 Oh boy, was this a hassle. 
 
 The Acer GN246HL monitor is advertised as here: https://www.acer.com/ac/en/US/content/model/UM.FG6AA.B01
@@ -21,7 +22,13 @@ Following this guide enabled lightboost on my monitor and also gave access to 10
 Now whilst this worked, i had also connected a Windows10 HDD, to see how it "should" be performing as a monitor. I followed the guides here relating to windows https://www.blurbusters.com/zero-motion-blur/lightboost/
 (see "Alternate LightBoost HOWTO #3: ToastyX Custom Resolution Utility")
 
-Once i had followed this, i decided to dump the EDID.bin from within Windows after configuring lightboost, so things are "like for like". You can download my EDID.bin from [here](https://github.com/Jigoku/Acer-GN246HL-linux/blob/master/files/EDID.bin), just place this at */etc/X11/EDID.bin*, then use the following xorg related config to load it;
+Once i had followed this, i decided to dump the EDID.bin from within Windows after configuring lightboost so that i could use it within X11 on Linux, so things are "like for like". 
+
+## Setting up X11
+
+Here's how to configure this monitor on X11 in Linux (possibly with other *nixes too).
+
+You can download my EDID.bin from [here](https://github.com/Jigoku/Acer-GN246HL-linux/blob/master/files/EDID.bin), just place this at */etc/X11/EDID.bin*, then use the following xorg related config to load it;
 
 */etc/X11/xorg.conf.d/10-nvidia.conf*
 ```
@@ -66,11 +73,15 @@ Eg:
 602 frames in 5.0 seconds = 120.384 FPS
 ```
 
+## Firefox tweaking
+
 Now there are some other tweaks you will have to make. One notable one is firefox. I was getting horrific blur/ghosting when scrolling any web page, and found a solution by forcing the refresh rate.
 Head to "about:config" in your browser. Search for "layout.frame_rate". 
 
 Force this setting to whatever your chosen refresh rate is. In my case, as i wanted to use the lightboost feature with 120hz, i set this value to 120.
 This should give you the crystal clear sharpness that is present on Windows when scrolling documents. This setting over ride should also make the ghosting/blur tests available at https://www.testufo.com/ work just as perfectly as in Windows. Despite vsync not being supported, you may get a slight stutter once in a while, but over all this should look sharp without any ghosting or blurring.
+
+## KDE5
 
 One thing specific to KDE5 is that you can also force the framerate to match the refresh rate, by editing *~/.config/kwinrc*
 
