@@ -1,5 +1,6 @@
 # Acer-GN246HL-linux
 Some information about using an Acer GN246HL monitor on Linux with nVidia lightboost.
+I have spent hours searching the web n order to setup this monitor within Linux, and hope that i can save some other peoples time by writing up my findings, and solutions.
 
 ## Background
 Oh boy, was this a hassle. 
