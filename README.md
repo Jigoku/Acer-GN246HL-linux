@@ -80,7 +80,8 @@ Now there are some other tweaks you will have to make. One notable one is firefo
 Head to "about:config" in your browser. Search for "layout.frame_rate". 
 
 Force this setting to whatever your chosen refresh rate is. In my case, as i wanted to use the lightboost feature with 120hz, i set this value to 120.
-This should give you the crystal clear sharpness that is present on Windows when scrolling documents. This setting over ride should also make the ghosting/blur tests available at https://www.testufo.com/ work just as perfectly as in Windows. Despite vsync not being supported, you may get a slight stutter once in a while, but over all this should look sharp without any ghosting or blurring.
+
+After restarting firefox, this should give you the crystal clear sharpness that is present on Windows when scrolling documents. This setting over ride should also make the ghosting/blur tests available at https://www.testufo.com/ work just as perfectly as in Windows. Despite vsync not being supported, you may get a slight stutter once in a while, but over all this should look sharp without any ghosting or blurring.
 
 ## KDE5
 
