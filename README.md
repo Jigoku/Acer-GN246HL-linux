@@ -55,7 +55,7 @@ Section "Device"
 EndSection
 ```
 
-Note the last line; where it states *DVI-D-0*, you may have to change this to whatever your monitor is labelled as, this will depend on the type of cable you are using, but should be at least a DVI name when wanting to use lightboost.
+Note the last few lines; where it states *DVI-D-0*, you may have to change this to whatever your monitor is labelled as, this will depend on the type of cable you are using, but should be at least a DVI name when wanting to use lightboost. You may be better off at first, using `nvidia-xconfig` to generate a config file to find the relevant information for the "Device" section, including your graphics card model etc, as this will probably differ. Make sure you remove */etc/X11/xorg.conf* afterwards.
 
 Make sure you don't have any other xorg.conf files, as this is all that is needed with nvidia's driver.
 You should now be able to launch nvidia-settings, and see these refresh rates:
