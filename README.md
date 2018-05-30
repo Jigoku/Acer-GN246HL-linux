@@ -25,6 +25,22 @@ Now whilst this worked, i had also connected a Windows10 HDD, to see how it "sho
 
 Once i had followed this, i decided to dump the EDID.bin from within Windows after configuring lightboost so that i could use it within X11 on Linux, so things are "like for like". 
 
+## Custom Modelines relating to lightboost
+
+Skip this part if you want to, as it's not neccesary to configure the monitor in X11 if you wish to use the EDID file contained in this repository.
+
+As for the previous paragraphs, with the link to custom modelines; as example for 120hz;
+`Modeline "1920x1080_120lb" 286.7 1920 1968 2000 2080 1080 1083 1088 1149 +HSync -VSync`
+
+This is an invalid modeline, hence you have to allow non edid modes. The reason for this, is that the last paramater for the vertical trace, should in fact be 1144. However, for the sake of enabling lightboost, this needs to be within the range of 1149-1180. I'm not fluent in the reasons for this, but thought i'd mention it for the sake of using `cvt` to generate a modeline.
+
+```
+$ cvt -r 1920 1080 120
+# 1920x1080 119.88 Hz (CVT) hsync: 137.14 kHz; pclk: 285.25 MHz
+Modeline "1920x1080R"  285.25  1920 1968 2000 2080  1080 1083 1088 1144 +hsync -vsync
+```
+As you can see, for 1920x1080 @ 120hz, this tells us the last value is 1144. When you increase this to 1149 (as to enable lightboost), the pixel clock has to also increase to reflect that. So 285.25 becomes 286.7. 
+
 ## Setting up X11
 
 Here's how to configure this monitor on X11 in Linux (possibly with other *nixes too).
