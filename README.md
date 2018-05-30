@@ -101,6 +101,8 @@ Force this setting to whatever your chosen refresh rate is. In my case, as i wan
 
 After restarting firefox, this should give you the crystal clear sharpness that is present on Windows when scrolling documents. This setting over ride should also make the ghosting/blur tests available at https://www.testufo.com/ work just as perfectly as in Windows. Despite vsync not being supported, you may get a slight stutter once in a while, but over all this should look sharp without any ghosting or blurring.
 
+the default value of "-1" is supposed to represent vsync, but for some reason this does not sync to the current refresh rate under Linux, i believe this may be a bug within firefox. But for now, forcing the refresh rate on this setting seems to be acceptable for ghosting-free and blur-free scrolling.
+
 ## KDE5
 
 One thing specific to KDE5 is that you can also force the framerate to match the refresh rate, by editing *~/.config/kwinrc*
