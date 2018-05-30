@@ -93,7 +93,7 @@ MaxFPS=120
 
 ```
 
-This will improve everything within KDE5 whilst using the plasma desktop, so that it actually uses 120hz.
+This will improve everything within KDE5 whilst using the plasma desktop, so that it actually uses 120hz. I typically run AwesomeWM, along with xcompmgr, but have not found a solution to this yet. I am also unaware of any other window managers/compositors that can be forced to render at anything higher than 60fps.
 
 
 ## TODO 
