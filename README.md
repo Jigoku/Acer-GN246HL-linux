@@ -93,4 +93,8 @@ MaxFPS=120
 
 ```
 
+This will improve everything within KDE5 whilst using the plasma desktop, so that it actually uses 120hz.
+
+
+## TODO 
 When i find more information, for any troublesome software relating to high refresh rates, i will try to update this and add them here.
