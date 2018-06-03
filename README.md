@@ -123,15 +123,26 @@ The VCP code 0xfa is responsible for setting the lightboost value in increments 
 VCP code 0xfa (Manufacturer Specific         ): mh=0x00, ml=0x0a, sh=0x00, sl=0x00, max value =    10, cur value =     0
 ```
 
-To set lightboost to maximum, use the following:
+* set lightboost to maximum
 ```
 $ ddcutil setvcp 0xfa 10
 ```
-To set this to 50%, use:
+* set lightboost to 50%
 ```
 $ ddcutil setvcp 0xfa 5
 ```
-and so on.
+
+You can extract the values for the ddc lightboost setting using these comands:
+
+* current value 
+```
+$ ddcutil getvcp 0xfa -t | awk {'print $4'}
+```
+
+* maximum value
+```
+$ ddcutil getvcp 0xfa -t | awk {'print $5'}
+```
 
 ## Firefox tweaking
 
