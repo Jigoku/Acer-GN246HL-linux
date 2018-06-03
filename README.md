@@ -47,7 +47,7 @@ As you can see, for 1920x1080 @ 120hz, this tells us the last value is 1144. Whe
 
 Here's how to configure this monitor on X11 in Linux (possibly with other *nixes too).
 
-You can download my EDID.bin from [here](https://github.com/Jigoku/Acer-GN246HL-linux/blob/master/files/EDID.bin), just place this at */etc/X11/EDID.bin*, then use the following xorg related config to load it;
+You can download my EDID.bin from [here](https://github.com/Jigoku/Acer-GN246HL-linux/blob/master/EDID.bin), just place this at */etc/X11/EDID.bin*, then use the following xorg related config to load it;
 
 */etc/X11/xorg.conf.d/10-nvidia.conf*
 ```
