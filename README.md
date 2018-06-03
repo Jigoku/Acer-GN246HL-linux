@@ -92,6 +92,30 @@ Eg:
 602 frames in 5.0 seconds = 120.384 FPS
 ```
 
+## ddcutil
+
+See the problem here: http://www.ddcutil.com/nvidia/
+
+Create */etc/modprobe.d/nvidia-ddcutil-fix.conf* containing:
+```
+options nvidia NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100
+```
+
+This should allow detection of the ddc capabilities
+```
+# ddcutil detect
+Display 1
+   I2C bus:             /dev/i2c-7
+   Supports DDC:        true
+   EDID synopsis:
+      Mfg id:           ACR
+      Model:            GN246HL
+      Serial number:    LW3EE0058533
+      Manufacture year: 2017
+      EDID version:     1.3
+   VCP version:         2.1
+```
+
 ## Firefox tweaking
 
 Now there are some other tweaks you will have to make. One notable one is firefox. I was getting horrific blur/ghosting when scrolling any web page, and found a solution by forcing the refresh rate.
