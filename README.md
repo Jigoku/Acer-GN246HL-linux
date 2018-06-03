@@ -141,6 +141,35 @@ $ ddcutil getvcp 0xfa -t | awk {'print $4'}
 * maximum value
 ```
 $ ddcutil getvcp 0xfa -t | awk {'print $5'}
+
+```
+
+#### ddc features not advertised as capabilities
+
+I am tempted to believe 0xe0, 0xe1, 0xe7, 0xe9 and 0xeb have something to do with configuring lightboost, i may be wrong here, but most of the values don't update when you try to change them. One thing that is true, is that 0xfa is responsible for setting the brightness of lightboost (the setting that is also on the OSD).
+
+```
+   Feature x03 - Soft controls
+   Feature x0b - Color temperature increment
+   Feature x0c - Color temperature request
+   Feature x0e - Clock
+   Feature x1e - Auto setup
+   Feature x1f - Auto color setup
+   Feature x20 - Horizontal Position (Phase)
+   Feature x30 - Vertical Position (Phase)
+   Feature x3e - Clock phase
+   Feature x62 - Audio speaker volume
+   Feature xa8 - Unknown feature
+   Feature xc0 - Display usage time
+   Feature xca - OSD
+   Feature xcb - Unknown feature
+   Feature xdc - Display Mode
+   Feature xe0 - Manufacturer Specific
+   Feature xe1 - Manufacturer Specific
+   Feature xe7 - Manufacturer Specific
+   Feature xe9 - Manufacturer Specific
+   Feature xeb - Manufacturer Specific
+   Feature xfa - Manufacturer Specific
 ```
 
 ## Firefox tweaking
