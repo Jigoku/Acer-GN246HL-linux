@@ -79,6 +79,7 @@ Note the last few lines; where it states *DVI-D-0*, you may have to change this 
 Make sure you don't have any other xorg.conf files, as this is all that is needed with nvidia's driver.
 You should now be able to launch nvidia-settings, and see these refresh rates:
 
+* 60hz
 * 100hz
 * 120hz
 * 144hz
