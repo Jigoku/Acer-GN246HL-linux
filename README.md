@@ -67,16 +67,14 @@ EndSection
 Section "Device"
     Identifier     "Device0"
     Driver         "nvidia"
-    VendorName     "NVIDIA Corporation"
-    BoardName	   "GeForce GTX 1060 3GB"
     Option         "NoLogo" "1"
     Option         "CustomEDID" "DVI-D-0:/etc/X11/EDID.bin"
 EndSection
 ```
 
-Note the last few lines; where it states *DVI-D-0*, you may have to change this to whatever your monitor is labelled as, this will depend on the type of cable you are using, but should be at least a DVI name when wanting to use lightboost. You may be better off at first, using `nvidia-xconfig` to generate a config file to find the relevant information for the "Device" section, including your graphics card model etc, as this will probably differ. Make sure you remove */etc/X11/xorg.conf* afterwards.
+Note the last few lines; where it states *DVI-D-0*, you may have to change this to whatever your monitor is labelled as, this will depend on the type of cable you are using, but should be at least a DVI name when wanting to use lightboost.
 
-Make sure you don't have any other xorg.conf files, as this is all that is needed with nvidia's driver.
+Make sure you don't have any other *.conf files in /etc/X11/xorg.conf.d/ and neither an /etc/X11/xorg.conf, as this single nvidia related file is all that is needed to get lightboost working with nvidia's proprietary driver.
 You should now be able to launch nvidia-settings, and see these refresh rates:
 
 * 60hz
