@@ -147,6 +147,9 @@ $ ddcutil getvcp 0xfa -t | awk {'print $5'}
 #### ddc features not advertised as capabilities
 
 I am tempted to believe 0xe0, 0xe1, 0xe7, 0xe9 and 0xeb have something to do with configuring lightboost, i may be wrong here, but most of the values don't update when you try to change them. One thing that is true, is that 0xfa is responsible for setting the brightness of lightboost (the setting that is also on the OSD).
+The features labelled as "phase" could have something to do with configuring the strobing, but these values cannot be changed either.
+
+If anyone else with this monitor can crack this and finds out anything else...
 
 ```
    Feature x03 - Soft controls
