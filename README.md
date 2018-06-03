@@ -116,6 +116,23 @@ Display 1
    VCP version:         2.1
 ```
 
+#### Controlling the lightboost value over ddc
+
+The VCP code 0xfa is responsible for setting the lightboost value in increments of 10.
+``` 
+VCP code 0xfa (Manufacturer Specific         ): mh=0x00, ml=0x0a, sh=0x00, sl=0x00, max value =    10, cur value =     0
+```
+
+To set lightboost to maximum, use the following:
+```
+$ ddcutil setvcp 0xfa 10
+```
+To set this to 50%, use:
+```
+$ ddcutil setvcp 0xfa 5
+```
+and so on.
+
 ## Firefox tweaking
 
 Now there are some other tweaks you will have to make. One notable one is firefox. I was getting horrific blur/ghosting when scrolling any web page, and found a solution by forcing the refresh rate.
